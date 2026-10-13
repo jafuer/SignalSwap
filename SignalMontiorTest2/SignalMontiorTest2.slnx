@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="SignalMontiorTest2/SignalMontiorTest2.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>

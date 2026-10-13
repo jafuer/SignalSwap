@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi_toggle_service_description">Test service for Signal Monitor. Opens Quick Settings and taps the Wi-Fi tile to turn Wi-Fi on or off.</string>
+</resources>
