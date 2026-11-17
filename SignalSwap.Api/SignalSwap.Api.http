@@ -1,0 +1,62 @@
+@host = https://api.signalswap.net:5080
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJTaWduYWxTd2FwLkFwcCIsImlzcyI6IlNpZ25hbFN3YXAiLCJleHAiOjE3OTc1MzQzNDgsInN1YiI6IjEiLCJ1bmlxdWVfbmFtZSI6InRlc3RlciIsInZlciI6IjAiLCJpYXQiOjE3OTQ5NDIzNDgsIm5iZiI6MTc5NDk0MjM0OH0.h0S1dnGM9Z0CmawbyAkeZlIb-bvJ54bIf5fimM33JXs
+
+GET {{host}}/api/health
+
+###
+
+POST {{host}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "tester",
+  "email": "tester@example.com",
+  "password": "change-me-123"
+}
+
+###
+
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "login": "tester",
+  "password": "change-me-123"
+}
+
+###
+
+GET {{host}}/api/auth/me
+Authorization: Bearer {{token}}
+
+###
+
+POST {{host}}/api/readings
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+[
+  { "clientId": "11111111-1111-1111-1111-111111111111", "recordedAt": "2026-11-15T23:00:00Z", "latitude": 41.247210, "longitude": -77.003050, "accuracyMeters": 6, "manualPosition": false, "ssid": "TestNet", "bssid": "aa:bb:cc:dd:ee:ff", "securityType": "WPA2", "signalStrength": null, "frequencyMhz": 5180, "linkSpeedMbps": 0, "floor": 1 },
+  { "clientId": "22222222-2222-2222-2222-222222222222", "recordedAt": "2026-11-15T23:00:02Z", "latitude": 41.247211, "longitude": -77.003051, "accuracyMeters": 6, "manualPosition": false, "ssid": "TestNet", "bssid": "aa:bb:cc:dd:ee:ff", "securityType": "WPA2", "signalStrength": null, "frequencyMhz": 5180, "linkSpeedMbps": 0, "floor": 1 },
+  { "clientId": "33333333-3333-3333-3333-333333333333", "recordedAt": "2026-11-15T23:00:04Z", "latitude": 41.247212, "longitude": -77.003052, "accuracyMeters": 6, "manualPosition": false, "ssid": "TestNet", "bssid": "aa:bb:cc:dd:ee:ff", "securityType": "WPA2", "signalStrength": -88, "frequencyMhz": 5180, "linkSpeedMbps": 6, "floor": 1 }
+]
+
+###
+
+GET {{host}}/api/networks
+Authorization: Bearer {{token}}
+
+###
+
+GET {{host}}/api/readings?ssid=TestNet
+Authorization: Bearer {{token}}
+
+###
+
+GET {{host}}/api/deadzones?ssid=TestNet
+Authorization: Bearer {{token}}
+
+###
+
+DELETE {{host}}/api/readings?ssid=TestNet
+Authorization: Bearer {{token}}

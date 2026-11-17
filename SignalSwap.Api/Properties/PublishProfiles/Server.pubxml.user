@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\SignalSwap\publish\</_PublishTargetUrl>
+    <History>True|2026-11-17T19:14:43.0053983Z||;False|2026-11-17T14:12:41.3518808-05:00||;False|2026-11-17T14:11:43.7201748-05:00||;True|2026-11-17T09:13:04.3792974-05:00||;True|2026-11-17T09:10:35.2002339-05:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
