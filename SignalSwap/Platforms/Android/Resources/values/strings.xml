@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wifi_toggle_service_description">SignalSwap opens Quick Settings and taps the Wi-Fi tile when your connection is too weak to use, then turns Wi-Fi back on later to check again.</string>
+</resources>

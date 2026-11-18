@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/Solution Items/" />
+  <Project Path="SignalSwap.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
